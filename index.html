@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced To-Do List</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 40px;
+      background: #f4f4f4;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+    }
+    #todo-form {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    #todo-form input, #todo-form button {
+      padding: 10px;
+      font-size: 1rem;
+    }
+    .task {
+      background: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .task.done {
+      text-decoration: line-through;
+      color: gray;
+    }
+    .task button {
+      margin-left: 5px;
+    }
+    #search {
+      margin-bottom: 20px;
+      padding: 10px;
+      font-size: 1rem;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Advanced To-Do List</h1>
+
+  <input type="text" id="search" placeholder="Search tasks...">
+
+  <form id="todo-form">
+    <input type="text" id="todo-input" placeholder="Add a new task" required />
+    <input type="date" id="due-date" />
+    <button type="submit">Add</button>
+  </form>
+
+  <div id="tasks"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
